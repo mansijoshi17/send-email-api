@@ -10,7 +10,7 @@ router.post("/send-email", async (req, res) => {
   const values = {
     from_name: "World Wide Link",
     message: req.body.message,
-    reply_to: req.body.email,
+    reply_to: req.body.reply_to,
   };
   await emailjs
     .send(
